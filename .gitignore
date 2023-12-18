@@ -1,0 +1,123 @@
+# macOS specific files
+.DS_Store
+
+# Node.js dependencies
+node_modules/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# macOS directory configuration files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code directories
+.vscode/
+
+# Build and temporary directories
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vscode
+
+# NuGet packages
+packages/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# macOS directory configuration files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code directories
+.vscode/
+
+# Build and temporary directories
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vscode
+
+# NuGet packages
+packages/
+
+# .NET Scaffolding
+ScaffoldingTemplates/
+
+# Rider specific files
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# macOS directory configuration files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code directories
+.vscode/
+
+# Build and temporary directories
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vscode
+
+# NuGet packages
+packages/
+
+# .NET Scaffolding
+ScaffoldingTemplates/
+
+# Rider specific files
+.idea/
