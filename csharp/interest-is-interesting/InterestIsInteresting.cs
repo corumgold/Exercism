@@ -2,28 +2,23 @@ using System;
 
 static class SavingsAccount
 {
-    private const float NegativeBalanceInterestRate = 3.213f;
-    private const float LowBalanceInterestRate = 0.5f;
-    private const float MediumBalanceInterestRate = 1.621f;
-    private const float HighBalanceInterestRate = 2.475f;
-
-    public static decimal InterestRate(decimal balance)
+    public static float InterestRate(decimal balance)
     {
         if (balance < 0)
         {
-            return (decimal)NegativeBalanceInterestRate;
+            return 3.213f;
         }
         else if (balance < 1000)
         {
-            return (decimal)LowBalanceInterestRate;
+            return 0.5f;
         }
         else if (balance < 5000)
         {
-            return (decimal)MediumBalanceInterestRate;
+            return 1.621f;
         }
         else
         {
-            return (decimal)HighBalanceInterestRate;
+            return 2.475f;
         }
     }
 
@@ -42,8 +37,7 @@ static class SavingsAccount
     public static int YearsBeforeDesiredBalance(decimal balance, decimal targetBalance)
     {
         int years = 0;
-        while (balance < targetBalance)
-        {
+        while(balance < targetBalance) {
             balance = AnnualBalanceUpdate(balance);
             years++;
         }
