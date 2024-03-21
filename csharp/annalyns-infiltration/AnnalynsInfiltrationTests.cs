@@ -1,7 +1,7 @@
 using Xunit;
 using Exercism.Tests;
 
-public class AnnalynsInfiltrationTests
+public class AnnalynsInfiltrationTestsf
 {
     [Fact]
     [Task(1)]
@@ -290,7 +290,7 @@ public class AnnalynsInfiltrationTests
     }
 
     [Fact]
-    [Task(4)]
+    // [Task(4)]
     public void Cannot_free_prisoner_if_only_prisoner_is_asleep_and_pet_dog_is_present()
     {
         var knightIsAwake = true;

@@ -1,56 +1,41 @@
 using System;
+using System.Net.NetworkInformation;
+using Microsoft.VisualStudio.TestPlatform.Common.DataCollection;
 
 static class QuestLogic
 {
-    public static bool CanFastAttack(bool knightIsAwake)
-    {
-        if (knightIsAwake)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+    public static bool CanFastAttack(bool knightIsAwake) => !knightIsAwake;
 
     public static bool CanSpy(bool knightIsAwake, bool archerIsAwake, bool prisonerIsAwake)
     {
-        if (knightIsAwake || archerIsAwake || prisonerIsAwake)
+        if (!knightIsAwake && !archerIsAwake && !prisonerIsAwake)
         {
-            return true;
+            return false;
         }
         else
         {
-            return false;
+            return true;
         }
     }
 
-    public static bool CanSignalPrisoner(bool archerIsAwake, bool prisonerIsAwake)
-    {
-        if (!archerIsAwake && prisonerIsAwake)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    public static bool CanSignalPrisoner(bool archerIsAwake, bool prisonerIsAwake) => prisonerIsAwake && !archerIsAwake;
 
     public static bool CanFreePrisoner(bool knightIsAwake, bool archerIsAwake, bool prisonerIsAwake, bool petDogIsPresent)
     {
-        if (petDogIsPresent && !archerIsAwake)
-        {
-            return true;
+        if (archerIsAwake) {
+            return false;
         }
-        else if (!knightIsAwake && !archerIsAwake && prisonerIsAwake)
-        {
-            return true;
+        else if (knightIsAwake && !petDogIsPresent) {
+            return false;
         }
-        else
+        else if (knightIsAwake && prisonerIsAwake && !petDogIsPresent)
         {
             return false;
         }
+        else if (!knightIsAwake && !archerIsAwake && !prisonerIsAwake && !petDogIsPresent)
+        {
+            return false;
+        }
+        else return true;
     }
 }
