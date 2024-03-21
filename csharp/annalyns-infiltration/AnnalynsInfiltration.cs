@@ -1,7 +1,4 @@
 using System;
-using System.Net.NetworkInformation;
-using Microsoft.VisualStudio.TestPlatform.Common.DataCollection;
-
 static class QuestLogic
 {
     public static bool CanFastAttack(bool knightIsAwake) => !knightIsAwake;
