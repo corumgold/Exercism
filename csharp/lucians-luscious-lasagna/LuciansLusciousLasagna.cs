@@ -1,20 +1,18 @@
 class Lasagna
 {
-    // TODO: define the 'ExpectedMinutesInOven()' method
-    public int ExpectedMinutesInOven() {
-        return 40;
+    public int ExpectedMinutesInOven() => 40;
+
+    public int RemainingMinutesInOven(int minutesElapsed)
+    {
+        var lasagna = new Lasagna();
+        return lasagna.ExpectedMinutesInOven() - minutesElapsed;
     }
-    // TODO: define the 'RemainingMinutesInOven()' method
-    public int RemainingMinutesInOven(int currentTime) {
-        return ExpectedMinutesInOven() - currentTime;
+
+    public int PreparationTimeInMinutes(int layers) => layers * 2;
+  
+    public int ElapsedTimeInMinutes(int layers, int timeInOven) {
+        var lasagna = new Lasagna();
+        return lasagna.PreparationTimeInMinutes(layers) + timeInOven;
     }
-    // TODO: define the 'PreparationTimeInMinutes()' method
-    public int PreparationTimeInMinutes(int layers) {
-        return layers * 2;
-    }
-    // TODO: define the 'ElapsedTimeInMinutes()' method
-    public int ElapsedTimeInMinutes(int layers, int minutesInOven) {
-        return (layers * 2) + minutesInOven;
-     }
 }
 
